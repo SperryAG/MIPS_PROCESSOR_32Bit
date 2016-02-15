@@ -192,8 +192,8 @@ BEGIN
 			END IF;
 			
 			-- -- -- -- -- -- -- -- -- -- -- --
-				ELSIF (Op(5 DOWNTO 1) = "00000") THEN --TODO
-			IF (Op(0) = '0') THEN -- PC <= JUMPREGISTER
+				ELSIF (Op(5 DOWNTO 1) = "00000") THEN 
+					IF (Op(0) = '0') THEN -- PC <= JUMPREGISTER
 				t_JALControl        <= '0';
 				t_RegDst            <= '1';
 				t_JALAddrControl    <= '0';
@@ -349,6 +349,23 @@ BEGIN
 				
 		-- -- -- -- -- -- -- -- -- --- -- -- -- -- 		
 				
+			ELSIF (Op = "101000") THEN --sb
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '1'; 
+				t_MemWrite          <= '1';
+				t_DSize             <= "00";
+				t_ALUControl        <= Func;
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '0';
 				
 			ELSIF (Op = "101011") THEN --sw
 				t_JALControl        <= '0';
@@ -367,6 +384,42 @@ BEGIN
 				t_ALUControl        <= Func;
 				t_ALUSrc            <= '1';	
 				t_RegWrite          <= '0';
+				
+			ELSIF (Op = "001010") THEN --slti
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '0'; 
+				t_MemWrite          <= '0';
+				t_DSize             <= "11";
+				t_ALUControl        <= Func;
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+				
+			ELSIF (Op = "001011") THEN --sltiu
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '0'; 
+				t_MemWrite          <= '0';
+				t_DSize             <= "11";
+				t_ALUControl        <= Func;
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
 				
 			ELSIF (Op = "001000") THEN --addi
 				t_JALControl        <= '0';
