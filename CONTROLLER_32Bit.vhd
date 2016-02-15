@@ -402,7 +402,67 @@ BEGIN
 				t_DSize             <= "11";
 				t_ALUControl        <= "100001";
 				t_ALUSrc            <= '1';	
-				t_RegWrite          <= '1';	
+				t_RegWrite          <= '1';
+				
+			ELSIF (Op = "001000") THEN --andi
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '0';
+				t_MemWrite          <= '1';
+				t_DSize             <= "11";
+				t_ALUControl        <= "100100";
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+				
+			ELSIF (Op = "001000") THEN --ori
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '0';
+				t_MemWrite          <= '1';
+				t_DSize             <= "11";
+				t_ALUControl        <= "100101";
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+
+			ELSIF (Op = "001000") THEN --xori
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '0';
+				t_MemWrite          <= '1';
+				t_DSize             <= "11";
+				t_ALUControl        <= "100110";
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+
+
+
+
+
+				
 		------- -- -- -- -- -- -- -- -- --  ----- 			
 			ELSIF (Op = "000100") THEN --BRANCH ON EQUAL-- IS ITYPE 
 				t_JALControl        <= '0';
