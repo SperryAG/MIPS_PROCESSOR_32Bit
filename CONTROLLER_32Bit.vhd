@@ -232,23 +232,23 @@ BEGIN
 		      
         -- Coprocessor Instructions
         ----------------------------
-		ELSIF (Op(5 DOWNTO 2) = "0100") THEN
-			t_JALControl        <= '0';
-			t_RegDst            <= '1';
-			t_JALAddrControl    <= '0';
-			t_JALDataControl    <= '1';
-			t_ShiftValueControl <= '0';
-			t_LoadControl       <= '0';
-			t_JRControl         <= '0';
-			t_JumpOrJRControl   <= '1';
-			t_LUIControl        <= '1';
-			t_Branch            <= '0';
-			t_MemToReg          <= '1';
-			t_MemWrite          <= '0';
-			t_DSize             <= "11";
-			t_ALUControl        <= Func;
-			t_ALUSrc            <= '0';	
-			t_RegWrite          <= '1';
+		--ELSIF (Op(5 DOWNTO 2) = "0100") THEN
+		--	t_JALControl        <= '0';
+		--	t_RegDst            <= '1';
+		--	t_JALAddrControl    <= '0';
+		--	t_JALDataControl    <= '1';
+		--	t_ShiftValueControl <= '0';
+		--	t_LoadControl       <= '0';
+		--	t_JRControl         <= '0';
+		--	t_JumpOrJRControl   <= '1';
+		--	t_LUIControl        <= '1';
+		--	t_Branch            <= '0';
+		--	t_MemToReg          <= '1';
+		--	t_MemWrite          <= '0';
+		--	t_DSize             <= "11";
+		--	t_ALUControl        <= Func;
+		--	t_ALUSrc            <= '0';	
+		--	t_RegWrite          <= '1';
         
         -- I-Type Instructions
         ----------------------------
