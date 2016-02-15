@@ -49,8 +49,8 @@ Compiling architecture behavioral of entity RAM_512x8Bit [ram_512x8bit_default]
 Compiling architecture behavioral of entity PROCESSOR_32Bit [processor_32bit_default]
 Compiling architecture behavior of entity processor_32bit_tb
 Time Resolution for simulation is 1ps.
-Waiting for 2 sub-compilation(s) to finish...
+Waiting for 3 sub-compilation(s) to finish...
 Compiled 41 VHDL Units
 Built simulation executable C:/Users/David/Desktop/MIPS_PROCESSOR_32Bit/PROCESSOR_32Bit_tb_isim_beh.exe
-Fuse Memory Usage: 37384 KB
-Fuse CPU Usage: 1937 ms
+Fuse Memory Usage: 36780 KB
+Fuse CPU Usage: 1984 ms

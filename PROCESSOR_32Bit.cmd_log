@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/David/Desktop/MIPS_PROCESSOR_32Bit/PROCESSOR_32Bit.xst" -ofn "C:/Users/David/Desktop/MIPS_PROCESSOR_32Bit/PROCESSOR_32Bit.syr" 

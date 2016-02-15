@@ -2,9 +2,9 @@ Command line:
    PROCESSOR_32Bit_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60608
+     -socket  60944
 
-Sun Feb 14 18:29:02 2016
+Sun Feb 14 20:07:55 2016
 
 
- Elaboration Time: 0.328125 sec
+ Elaboration Time: 0.4375 sec

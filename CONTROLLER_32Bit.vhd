@@ -63,6 +63,60 @@ BEGIN
 			t_ALUControl        <= Func;
 			t_ALUSrc            <= '0';	
 			t_RegWrite          <= '1';
+			
+		ELSIF (Op = "000000") and ( (Func = "000000") OR (Func = "000010") OR (Func = "000011") )THEN --FOR SHIFING
+			t_JALControl        <= '0';
+			t_RegDst            <= '1';
+			t_JALAddrControl    <= '0';
+			t_JALDataControl    <= '1';
+			t_ShiftValueControl <= '1';
+			t_LoadControl       <= '0';
+			t_JRControl         <= '1';
+			t_JumpOrJRControl   <= '0';
+			t_LUIControl        <= '1';
+			t_Branch            <= '0';
+			t_MemToReg          <= '0';
+			t_MemWrite          <= '0';
+			t_DSize             <= "11";
+			t_ALUControl        <= Func;
+			t_ALUSrc            <= '0';	
+			t_RegWrite          <= '1';
+		
+		ELSIF (Op = "000000") and ( (Func = "000100") OR (Func = "000110") OR (Func = "000111") ) THEN --FOR SHIFING
+			t_JALControl        <= '0';
+			t_RegDst            <= '1';
+			t_JALAddrControl    <= '0';
+			t_JALDataControl    <= '1';
+			t_ShiftValueControl <= '1';
+			t_LoadControl       <= '0';
+			t_JRControl         <= '1';
+			t_JumpOrJRControl   <= '0';
+			t_LUIControl        <= '1';
+			t_Branch            <= '0';
+			t_MemToReg          <= '0';
+			t_MemWrite          <= '0';
+			t_DSize             <= "11";
+			t_ALUControl        <= Func;
+			t_ALUSrc            <= '0';	
+			t_RegWrite          <= '1';
+		
+		ELSIF (Op = "000000") and (Func = "001000") THEN --JUMP REGISTER
+			t_JALControl        <= '0';
+			t_RegDst            <= '1';
+			t_JALAddrControl    <= '0';
+			t_JALDataControl    <= '1';
+			t_ShiftValueControl <= '0';
+			t_LoadControl       <= '0';
+			t_JRControl         <= '1';
+			t_JumpOrJRControl   <= '0';
+			t_LUIControl        <= '1';
+			t_Branch            <= '0';
+			t_MemToReg          <= '0';
+			t_MemWrite          <= '0';
+			t_DSize             <= "11";
+			t_ALUControl        <= Func;
+			t_ALUSrc            <= '0';	
+			t_RegWrite          <= '1';
 		ELSIF  (Op = "000000") and (Func = "001001") THEN --JUMP AND LINK REGISTER
 			t_JALControl        <= '1';
 			t_RegDst            <= '1';
