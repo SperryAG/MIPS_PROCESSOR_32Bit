@@ -84,13 +84,33 @@ BEGIN
 				ELSE
 					bo <= '0';
 				END IF;
-			ELSIF Func_in(2 DOWNTO 0) = "001" THEN --BGT or Equal to zero
+				
+			ELSIF Func_in(2 DOWNTO 0) = "001" and B_in(5 DOWNTO 0) = "000001" THEN --BGT or Equal to zero
 				wire <= A_in;
 				IF ( to_integer(signed(A_in))>= 0 ) THEN
 					bo <= '1';
 				ELSE
 					bo <= '0';
 				END IF;
+				
+			ELSIF Func_in(2 DOWNTO 0) = "001" and B_in(5 DOWNTO 0) = "000000" THEN --BLT zero
+				wire <= A_in;
+				IF ( to_integer(signed(A_in))< 0 ) THEN
+					bo <= '1';
+				ELSE
+					bo <= '0';
+				END IF;
+			
+			
+			ELSIF Func_in(2 DOWNTO 0) = "001" THEN --TO catch error
+				wire <= A_in;
+				IF ( to_integer(signed(A_in))>= 0 ) THEN
+					bo <= '1';
+				ELSE
+					bo <= '0';
+				END IF;
+				
+				
 			ELSIF Func_in(2 DOWNTO 0) = "100" THEN --BRANCH EQUAL
 				wire <= A_in;
 				IF ( to_integer(signed(A_in)) = to_integer(signed(B_in)) ) THEN

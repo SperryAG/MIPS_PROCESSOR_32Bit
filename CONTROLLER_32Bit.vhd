@@ -271,6 +271,44 @@ BEGIN
 				t_ALUSrc            <= '1';	
 				t_RegWrite          <= '1';
 				
+				
+			ELSIF (Op = "100000") THEN --lb
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '0';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '1';
+				t_Branch            <= '0';
+				t_MemToReg          <= '1';
+				t_MemWrite          <= '0';
+				t_DSize             <= "00";
+				t_ALUControl        <= Func;
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+				
+				
+			ELSIF (Op = "100100") THEN --lbu (unsigned)
+				t_JALControl        <= '0';
+				t_RegDst            <= '0';
+				t_JALAddrControl    <= '0';
+				t_JALDataControl    <= '1';
+				t_ShiftValueControl <= '0';
+				t_LoadControl       <= '1';
+				t_JRControl         <= '0';
+				t_JumpOrJRControl   <= '1';
+				t_LUIControl        <= '0';
+				t_Branch            <= '0';
+				t_MemToReg          <= '1';
+				t_MemWrite          <= '0';
+				t_DSize             <= "00";
+				t_ALUControl        <= Func;
+				t_ALUSrc            <= '1';	
+				t_RegWrite          <= '1';
+				
 			-- -- -- -- -- -- -- -- -- -- -- -- 
 			ELSIF (Op = "100001") THEN --lw (half)
 				t_JALControl        <= '0';
