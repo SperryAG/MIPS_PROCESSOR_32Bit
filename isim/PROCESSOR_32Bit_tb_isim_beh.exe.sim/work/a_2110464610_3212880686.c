@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Andrew/Desktop/MIPS_Processor_ISEProjectFolder-4469b093a0014f9e0d1c7163a96ff27e3d4e2b8d/PROG_COUNTER_32Bit.vhd";
+static const char *ng0 = "C:/Users/David/Desktop/MIPS_PROCESSOR_32Bit/PROG_COUNTER_32Bit.vhd";
 
 
 
