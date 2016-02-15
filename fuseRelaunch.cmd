@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Andrew/Desktop/MIPS_Processor_ISEProjectFolder-4469b093a0014f9e0d1c7163a96ff27e3d4e2b8d/PROCESSOR_32Bit_tb_isim_beh.exe" -prj "C:/Users/Andrew/Desktop/MIPS_Processor_ISEProjectFolder-4469b093a0014f9e0d1c7163a96ff27e3d4e2b8d/PROCESSOR_32Bit_tb_beh.prj" "work.PROCESSOR_32Bit_tb" 
